@@ -10,20 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('master');
-});
-
-
-Route::get('/accueil', function () {
-    return view('accueil');
-});
-
-Route::get('/test', function () {
-    return view('test');
-});
-
 Auth::routes();
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', function () {
+    return view('master');
+	});
+    Route::get('/test', function () {
+    return view('test');
+	});
+	Route::get('/accueil', function () {
+    return view('accueil');
+	});
+});
 Route::get('/home', 'HomeController@index')->name('home');
+
