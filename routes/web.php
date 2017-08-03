@@ -20,6 +20,8 @@ Route::middleware(['auth'])->group(function () {
 	});
 	Route::get('/accueil', function () {
     return view('accueil');
+	});Route::get('/hamza', function () {
+    return view('accueil');
 	});
 });
 Route::get('/home', 'HomeController@index')->name('home');
