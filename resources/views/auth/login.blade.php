@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
 
-        <div class="col-md-6 col-md-offset-3" style="margin-top: 175px;">
+        <div class="col-md-6 col-md-offset-3" style="margin-top: 15%;">
         <div class="panel-heading" style="font-size: 35px; text-align: center; margin-bottom: 5px;font-weight: 300;">
                     
                     <b>Application </b>Fiduciaire
@@ -19,7 +19,7 @@
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">Adresse Email</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -33,7 +33,7 @@
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Mot de passe</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="password" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
